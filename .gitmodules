@@ -1,0 +1,6 @@
+[submodule "scribe-plugin-table-command"]
+	path = scribe-plugin-table-command
+	url = git@github.com:coursera/scribe-plugin-table-command.git
+[submodule "scribe-plugin-placeholder"]
+	path = scribe-plugin-placeholder
+	url = https://github.com/coursera/scribe-plugin-placeholder
