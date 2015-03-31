@@ -3,10 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Scribe-plugins by coursera</title>
+    <title>Scribe Plugins by Coursera</title>
 
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="stylesheets/scribe.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -15,28 +17,65 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Scribe-plugins</h1>
-        <p></p>
+        <h1>Scribe Plugins</h1>
+        <p>Plugins for <a href="https://github.com/guardian/scribe/">scribe</a> by Coursera.</p>
 
-        <p class="view"><a href="https://github.com/coursera/scribe-plugins">View the Project on GitHub <small>coursera/scribe-plugins</small></a></p>
-
-
-        <ul>
-          <li><a href="https://github.com/coursera/scribe-plugins/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/coursera/scribe-plugins/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/coursera/scribe-plugins">View On <strong>GitHub</strong></a></li>
-        </ul>
+        <p class="view"><a href="https://github.com/coursera/scribe-plugin-table-command">View the Project on GitHub <small>coursera/scribe-plugins</small></a></p>
       </header>
+
       <section>
-        <h1>
-<a id="scribe-plugins" class="anchor" href="#scribe-plugins" aria-hidden="true"><span class="octicon octicon-link"></span></a>scribe-plugins</h1>
+
+        <h2><a id="scribe-table-plugin" class="anchor" href="#scribe-table-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+        Table &nbsp;&nbsp;&nbsp;<a target="_blank" href="https://github.com/coursera/scribe-plugin-table-command">code</a>
+        </h2>
+
+        <div class="scribe scribe-table"></div>
+        <div class="toolbar">
+          <button data-command-name="table">Insert Table</button>
+        </div>
+        <br>
+        <h3><a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+        <pre><code>var tableCommand = require('scribe-plugin-table-command');
+require('css!scribe-plugin-table-command');
+
+scribe.use(tableCommand());</code></pre>
+
       </section>
+
+      <section>
+
+        <h2><a id="scribe-placeholder-plugin" class="anchor" href="#scribe-placeholder-plugin" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+        Placeholder &nbsp;&nbsp;&nbsp;<a target="_blank" href="https://github.com/coursera/scribe-plugin-placeholder">code</a>
+        </h2>
+
+        <div class="scribe-placeholder-container" style="position: relative">
+          <div class="scribe scribe-placeholder"></div>
+        </div>
+        <br>
+        <h3><a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h3>
+
+        <pre><code>require('css!scribe-plugin-placeholder');
+
+var placeholderPlugin = require('scribe-plugin-placeholder');
+
+// Text to show as placeholder.
+var placeholder = 'Enter content...';
+
+// DOM Element containing the scribe editor instance.
+var container = document.querySelector('.scribe-editor-container');
+
+scribe.use(placeholderPlugin(placeholder, container));</code></pre>
+
+      </section>
+
       <footer>
         <p>This project is maintained by <a href="https://github.com/coursera">coursera</a></p>
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+
+  <script src="bower_components/requirejs/require.js" data-main="javascripts/example"></script>
   </body>
 </html>
